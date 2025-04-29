@@ -72,6 +72,7 @@ function App() {
     if (response.status !== 200) {
       return alert("Something went wrong while clearing completed todos");
     }
+    
 
     const data = await response.json();
     setTodos(data.todos);

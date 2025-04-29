@@ -4,7 +4,6 @@ import cors from "cors";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
-
 const app = express()
 
 app.use(express.json());
