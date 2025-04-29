@@ -1,0 +1,35 @@
+
+
+body{
+  padding: 0;
+  margin: 0;
+  background-image: url(/public/images/bg-mobile-dark.jpg);
+  background-repeat:no-repeat;
+  background-position: center top;
+  background-size: contain;
+  font-family:  "Josefin Sans", sans-serif;
+  background-color: var(--body);
+  
+}
+
+body.light-mode {
+  background-image: url(/public/images/bg-mobile-light.jpg);
+}
+
+
+@media (min-width: 768px) {
+  body{
+    background-image: url(/public/images/bg-desktop-dark.jpg);
+    display: grid;
+    place-items: center;
+  }
+}
+
+@media (min-width: 768px) {
+  body.light-mode {
+    background-image: url(/public/images/bg-desktop-light.jpg);
+    display: grid;
+    place-items: center;
+  }
+}
+
