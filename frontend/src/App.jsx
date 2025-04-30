@@ -8,7 +8,7 @@ function App() {
   const [filter, setFilter] = useState("all");
 
   const getTodos = async () => {
-    const response = await fetch('http://localhost:3000/')
+    const response = await fetch('/api/')
     const todos = await response.json();
     setTodos(todos)
   }
@@ -19,7 +19,7 @@ function App() {
 
 
   const addTodo = async (title) => {
-    const response = await fetch('http://localhost:3000/', {
+    const response = await fetch('/api/', {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ title }),
@@ -38,7 +38,7 @@ function App() {
 
 
   const removeTodo = async (id) => {
-    const response = await fetch(`http://localhost:3000/${Number(id)}`, {
+    const response = await fetch(`/api/${Number(id)}`, {
       method: "DELETE",
     });
     if (response.status !== 200) {
@@ -48,7 +48,7 @@ function App() {
   }
 
   const updateTodo = async (id) => {
-    const response = await fetch(`http://localhost:3000/${id}`, {
+    const response = await fetch(`/api/${id}`, {
       method: "PUT",
     });
     if (response.status !== 200) {
@@ -65,7 +65,7 @@ function App() {
   }
 
   const clearCompleted = async () => {
-    const response = await fetch('http://localhost:3000/clear-completed', {
+    const response = await fetch('/api/clear-completed', {
       method: "DELETE",
     });
 
