@@ -35,7 +35,7 @@
   "scripts": {
      "dev": "concurrently \"npm run dev --prefix server\" \"npm run dev --prefix frontend\"",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js"
+    "start": "node server/index.js"
   },
   "repository": {
     "type": "git",
